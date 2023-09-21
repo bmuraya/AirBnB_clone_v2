@@ -24,8 +24,8 @@ sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 # Give ownership to ubuntu user and group
 sudo chown -R ubuntu:ubuntu /data/
 
-# update Nginx config to serve /data/web_static/current at /hbnb_static/
-sudo sed -i "26i \\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}\n" /etc/nginx/sites-available/default
+# update Nginx config to serve /data/web_static/current at /web_static/
+sudo sed -i "26i \\\tlocation /web_static/ {\n\t\talias /data/web_static/current/;\n\t}\n" /etc/nginx/sites-available/default
 
 # Restart Nginx to apply changes
 sudo service nginx restart
